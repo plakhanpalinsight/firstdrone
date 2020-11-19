@@ -18,8 +18,10 @@ steps:
     create_repository: false
     access_key:
       from_secret: aws_access_key_id
-    password:
+    secret_key:
       from_secret: aws_secret_access_key
+    region:
+      from_secret: aws_region
     repo: droneimages
     registry: 182069787212.dkr.ecr.us-west-2.amazonaws.com
     tags: 
