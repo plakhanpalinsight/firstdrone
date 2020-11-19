@@ -25,4 +25,4 @@ steps:
     repo: droneimages
     registry: 182069787212.dkr.ecr.us-west-2.amazonaws.com
     tags: 
-      - '1.0.3'
+      - '1.0.4'
