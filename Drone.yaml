@@ -13,12 +13,14 @@ steps:
     - "go build -o ./myapp"
 
 - name: publish  
-  image: plugins/docker
+  image: plugins/ecr
   settings:
-    username:
-      from_secret: docker_username
+    create_repository: false
+    access_key:
+      from_secret: aws_access_key_id
     password:
-      from_secret: docker_password
-    repo: puneetlakhanpalinsight/firstdrone
+      from_secret: aws_secret_access_key
+    repo: droneimages
+    registry: 182069787212.dkr.ecr.us-west-2.amazonaws.com
     tags: 
-      - '1.0.3'
+      - '1.0.0'
